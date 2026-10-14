@@ -1,0 +1,32 @@
+PhishingLens - Connected Tools Clean Package
+
+This package contains ONLY the three files that need to be replaced:
+
+1. backend/main.py
+2. frontend/index.html
+3. frontend/js/app.js
+
+Before replacing:
+- Stop the running uvicorn server (Ctrl+C) if needed.
+- Make backups of your current three files if you want an extra safety copy.
+
+Extract this ZIP into the PhishingLens project root and allow it to merge/replace files.
+
+Expected final paths:
+PhishingLens/backend/main.py
+PhishingLens/frontend/index.html
+PhishingLens/frontend/js/app.js
+
+IMPORTANT:
+- Do NOT replace frontend/app.py.
+- Do NOT replace your ML model.
+- Do NOT delete backend_addon/.
+- backend_addon/domain_intelligence.py must remain in the project because main.py imports it.
+
+After replacement:
+1. Start the server:
+   python -m uvicorn backend.main:app --reload
+2. Open http://127.0.0.1:8000
+3. Hard refresh with Ctrl+F5.
+
+This version keeps the connected utilities and uses a clean UTF-8 index.html, including the normal sun theme icon.
